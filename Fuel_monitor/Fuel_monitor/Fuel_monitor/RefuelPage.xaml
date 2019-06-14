@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fuel_monitor.RefuelPage">
+    <Grid >
+        <Grid.ColumnDefinitions HasUnevenRows="True">
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions HasUnevenRows="True">
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Text="Licznik przebiegu: " Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+        <Entry x:Name="Entry_Przebieg" Grid.Row="0"  Grid.Column="1" Placeholder="000000"  Keyboard="Numeric" HorizontalTextAlignment="Center"/>
+
+        <Label Text="Zatankowano: " Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"/>
+        <Entry x:Name="Entry_Zatankowano" Grid.Row="1" Grid.Column="1" Placeholder="0.00l" Keyboard="Numeric" HorizontalTextAlignment="Center" />
+
+        <Label Text="Cena za litr w zł: " Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"/>
+        <Entry x:Name="Entry_CenaLitra" Grid.Row="2" Grid.Column="1" Placeholder="0.00"  Keyboard="Numeric" HorizontalTextAlignment="Center"/>
+
+        <Label Text="Koszt: " Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"/>
+        <Entry x:Name="Entry_Koszt" Grid.Row="3" Grid.Column="1" Placeholder="0.00"  Keyboard="Numeric" HorizontalTextAlignment="Center"  />
+
+        <Label Text="Data tankowania: " Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <DatePicker x:Name="Entry_DataTankowania"  Grid.Row="4" Grid.Column="1"  VerticalOptions="CenterAndExpand" />
+
+        <Button Text="Dodaj tankowanie" Grid.Row="5" Grid.ColumnSpan="2" FontSize="Medium" Clicked="Button_Clicked"/>
+    </Grid>
+</ContentPage>

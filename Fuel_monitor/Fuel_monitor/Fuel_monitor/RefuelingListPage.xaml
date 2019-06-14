@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fuel_monitor.RefuelingListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listView" HasUnevenRows="True">
+
+                <ListView.ItemTemplate x:Name="refuelsListView">
+
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding Data_tankowania, StringFormat='Data: {0:d}'}"></Label>
+
+
+                                    <Label Text="{Binding Koszt, StringFormat=' {0:F2} zł'}" TextColor="Gray" />
+
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="EndAndExpand">
+                                    <Label Text="{Binding Przebieg, StringFormat=' {0} km'}" />
+                                    <!--Powinno być tu jeszcze spalanie-->
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
